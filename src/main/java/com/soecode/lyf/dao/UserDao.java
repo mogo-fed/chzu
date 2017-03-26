@@ -1,6 +1,5 @@
 package com.soecode.lyf.dao;
 
-import com.soecode.lyf.entity.Book;
 import com.soecode.lyf.entity.User;
 import org.apache.ibatis.annotations.Param;
 

@@ -5,15 +5,15 @@ package com.soecode.lyf.entity;
  */
 public class User {
 
-	private long userId;//
+	private long userId;
 
-	private String userName;//
+	private String userName;
 
-	private String userPwd;//
-	private String userTel;//
-	private String userAdr;//
-	private String userType;//
-	private String userSellerName;//
+	private String userPwd;
+	private String userTel;
+	private String userAdr;
+	private String userType;
+	private String userSellerName;
 
 	public long getUserId() {
 		return userId;

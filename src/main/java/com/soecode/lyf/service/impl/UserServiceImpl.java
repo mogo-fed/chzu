@@ -1,20 +1,12 @@
 package com.soecode.lyf.service.impl;
 
-import com.soecode.lyf.dao.AppointmentDao;
 import com.soecode.lyf.dao.UserDao;
-import com.soecode.lyf.dto.AppointExecution;
-import com.soecode.lyf.entity.Appointment;
 import com.soecode.lyf.entity.User;
-import com.soecode.lyf.enums.AppointStateEnum;
-import com.soecode.lyf.exception.AppointException;
-import com.soecode.lyf.exception.NoNumberException;
-import com.soecode.lyf.exception.RepeatAppointException;
 import com.soecode.lyf.service.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 

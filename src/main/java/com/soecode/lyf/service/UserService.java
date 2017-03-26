@@ -1,8 +1,6 @@
 package com.soecode.lyf.service;
 
-import com.soecode.lyf.dto.AppointExecution;
 import com.soecode.lyf.entity.User;
-import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
