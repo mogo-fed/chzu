@@ -29,12 +29,12 @@ public class UserController {
 
 	@RequestMapping(value = "/queryByName", method = RequestMethod.GET)
 	@ResponseBody
-	private String queryByName(@Param("username") String username,@Param("userpwd") String userpwd,@Param("userpwd") String usertype) {
+	private String queryByName(@Param("username") String username,@Param("userpwd") String userpwd,@Param("usertype") String usertype) {
 		User user = userService.getByName(username,userpwd,usertype);
-		if (user != null){
-			return "1";
-		}else {
+		if (user == null){
 			return "0";
+		}else {
+			return user.toString();
 		}
 	}
 
