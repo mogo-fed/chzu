@@ -1,7 +1,7 @@
 package com.soecode.lyf.entity;
 
 /**
- * 图书实体
+ * 实体
  */
 public class MenuDetail {
 

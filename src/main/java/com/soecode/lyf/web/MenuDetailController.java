@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
@@ -27,14 +28,24 @@ public class MenuDetailController {
 		return list;
 	}
 
-	@RequestMapping(value = "/addMenuDetail", method = RequestMethod.GET)
+	@RequestMapping(value = "/queryMdByMsId", method = RequestMethod.GET)
 	@ResponseBody
-	private String addMenuDetail(@Param("msId") long msId, @Param("mdName") String mdName,
-								 @Param("mdImg") String mdImg, @Param("mdNowprice") String mdNowprice,
-								 @Param("mdPreprice") String mdPreprice, @Param("mdDescribe") String mdDescribe,
-								 @Param("mdMonthsale") String mdMonthsale,@Param("mdPraise") String mdPraise) {
+	private List<MenuDetail> queryMdByMsId(@Param("msId") long msId) {
+		List<MenuDetail> menudetail = menudetailService.queryMdByMsId(msId);
+		return menudetail;
+	}
+
+	@RequestMapping(value = "/addMenuDetail", method = RequestMethod.POST)
+	@ResponseBody
+
+	private String addMenuDetail(@RequestParam("msId") long msId, @RequestParam("mdName") String mdName,
+								 @RequestParam("mdImg") String mdImg, @RequestParam("mdNowprice") String mdNowprice,
+								 @RequestParam("mdPreprice") String mdPreprice, @RequestParam("mdDescribe") String mdDescribe,
+								 @RequestParam("mdMonthsale") String mdMonthsale,@RequestParam("mdPraise") String mdPraise) {
 		Integer addList = menudetailService.addMenuDetail(msId, mdName, mdImg, mdNowprice,
 				mdPreprice, mdDescribe, mdMonthsale, mdPraise);
+		System.out.print("--------------------------------");
+		System.out.print(mdName);
 		return Integer.toString(addList);
 	}
 

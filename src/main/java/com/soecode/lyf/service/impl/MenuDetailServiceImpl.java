@@ -21,9 +21,13 @@ public class MenuDetailServiceImpl implements MenuDetailService {
 
 	@Override
 	public List<MenuDetail> queryMenuDetailAll() {
-
 		 List<MenuDetail> list=menudetailDao.queryMenuDetailAll();
 		return list;
+	}
+
+	@Override
+	public List<MenuDetail> queryMdByMsId(long msId) {
+		return menudetailDao.queryMdByMsId(msId);
 	}
 
 	@Override

@@ -15,6 +15,12 @@ public interface MenuDetailDao {
 	List<MenuDetail> queryMenuDetailAll();
 
 	/**
+	 * @param msId
+	 * @return
+	 */
+	List<MenuDetail> queryMdByMsId(@Param("msId") long msId);
+
+	/**
 	 * @param mdName
 	 * @return
 	 */

@@ -16,6 +16,13 @@ public interface MenuDetailService {
 	List<MenuDetail> queryMenuDetailAll();
 
 	/**
+	 * 查询
+	 * @param msId
+	 * @return
+	 */
+	List<MenuDetail> queryMdByMsId(long msId);
+
+	/**
 	 * 增加
 	 * @return
 	 */
