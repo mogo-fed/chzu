@@ -36,6 +36,24 @@ public interface UserService {
 	 * 更新
 	 * @return
 	 */
-	Integer updateUser(String username, String usertel,String useradr,String usertype,String usersellername);
+	Integer updateUser(String username, String userpwd, String usertel,String useradr,String usertype,String usersellername);
+
+	/**
+	 * 更新
+	 * @return
+	 */
+	Integer updateUserPwd(String username, String userpwd);
+
+	/**
+	 * 更新
+	 * @return
+	 */
+	Integer updateUserTel(String username, String usertel);
+
+	/**
+	 * 更新
+	 * @return
+	 */
+	Integer updateUserAdr(String username, String useradr, String usertel);
 
 }

@@ -50,9 +50,30 @@ public class UserController {
 
 	@RequestMapping(value = "/updateUser", method = RequestMethod.GET)
 	@ResponseBody
-	private String updateUser(@Param("username") String username, @Param("usertel") String usertel,@Param("useradr") String useradr,
+	private String updateUser(@Param("username") String username,@Param("userpwd") String userpwd, @Param("usertel") String usertel,@Param("useradr") String useradr,
 							  @Param("usertype") String usertype,@Param("usersellername") String usersellername) {
-		Integer updateUser = userService.updateUser(username,usertel,useradr,usertype,usersellername);
+		Integer updateUser = userService.updateUser(username,userpwd,usertel,useradr,usertype,usersellername);
+		return updateUser.toString();
+	}
+
+	@RequestMapping(value = "/updateUserPwd", method = RequestMethod.GET)
+	@ResponseBody
+	private String updateUserPwd(@Param("username") String username,@Param("userpwd") String userpwd) {
+		Integer updateUser = userService.updateUserPwd(username,userpwd);
+		return updateUser.toString();
+	}
+
+	@RequestMapping(value = "/updateUserTel", method = RequestMethod.GET)
+	@ResponseBody
+	private String updateUserTel(@Param("username") String username,@Param("usertel") String usertel) {
+		Integer updateUser = userService.updateUserTel(username,usertel);
+		return updateUser.toString();
+	}
+
+	@RequestMapping(value = "/updateUserAdr", method = RequestMethod.GET)
+	@ResponseBody
+	private String updateUserAdr(@Param("username") String username,@Param("useradr") String useradr,@Param("usertel") String usertel) {
+		Integer updateUser = userService.updateUserAdr(username,useradr,usertel);
 		return updateUser.toString();
 	}
 }

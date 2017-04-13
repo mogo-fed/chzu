@@ -39,8 +39,27 @@
 
 	<update id="updateUser">
 		UPDATE users
-		SET user_name = #{username},user_tel =#{usertel},user_adr =#{useradr},user_type =#{usertype},user_sellername =#{usersellername}
+		SET user_name = #{username},user_pwd = #{userpwd} ,user_tel =#{usertel},user_adr =#{useradr},user_type =#{usertype},user_sellername =#{usersellername}
 		WHERE user_name = #{username}
 	</update>
+
+	<update id="updateUserPwd">
+		UPDATE users
+		SET user_name = #{username},user_pwd = #{userpwd}
+		WHERE user_name = #{username}
+	</update>
+
+	<update id="updateUserTel">
+		UPDATE users
+		SET user_name = #{username},user_tel =#{usertel}
+		WHERE user_name = #{username}
+	</update>
+
+	<update id="updateUserAdr">
+		UPDATE users
+		SET user_name = #{username},user_adr =#{useradr},user_tel =#{usertel}
+		WHERE user_name = #{username}
+	</update>
+
 
 </mapper>

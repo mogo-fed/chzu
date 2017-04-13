@@ -40,8 +40,30 @@ public interface UserDao {
 	 * @param useradr
 	 * @return
 	 */
-	Integer updateUser(@Param("username") String username, @Param("usertel") String usertel,@Param("useradr") String useradr,
+	Integer updateUser(@Param("username") String username,@Param("userpwd") String userpwd, @Param("usertel") String usertel,@Param("useradr") String useradr,
 					   @Param("usertype") String usertype,@Param("usersellername") String usersellername);
+
+	/**
+	 * @param username
+	 * @param userpwd
+	 * @return
+	 */
+	Integer updateUserPwd(@Param("username") String username,@Param("userpwd") String userpwd);
+
+	/**
+	 * @param username
+	 * @param usertel
+	 * @return
+	 */
+	Integer updateUserTel(@Param("username") String username, @Param("usertel") String usertel);
+
+	/**
+	 * @param username
+	 * @param useradr
+	 * @return
+	 */
+	Integer updateUserAdr(@Param("username") String username,@Param("useradr") String useradr, @Param("usertel") String usertel);
+
 
 
 }
