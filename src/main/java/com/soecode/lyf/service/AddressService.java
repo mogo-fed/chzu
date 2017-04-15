@@ -33,6 +33,6 @@ public interface AddressService {
 	 * 更新
 	 * @return
 	 */
-	Integer updateAddress(long userid, String receiver_address_id, String receiver_address_username,String receiver_address_usertel,String receiver_address_useradr);
+	Integer updateAddress(long userid, long receiver_address_id, String receiver_address_username,String receiver_address_usertel,String receiver_address_useradr);
 
 }

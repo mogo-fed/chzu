@@ -26,3 +26,5 @@
 127.0.0.1 - - [15/Apr/2017:13:27:26 +0800] "GET /ssm/address/queryAddressAll?userid=3 HTTP/1.0" 200 253 http-bio-82-exec-6 6
 127.0.0.1 - - [15/Apr/2017:13:27:34 +0800] "GET /ssm/address/queryAddressAll?userid=3 HTTP/1.0" 200 253 http-bio-82-exec-7 6
 127.0.0.1 - - [15/Apr/2017:13:29:58 +0800] "GET /ssm/address/queryAddressAll?userid=3 HTTP/1.0" 200 253 http-bio-82-exec-8 7
+127.0.0.1 - - [15/Apr/2017:13:35:39 +0800] "GET /ssm/address/queryAddressAll?userid=3 HTTP/1.0" 200 253 http-bio-82-exec-9 8
+127.0.0.1 - - [15/Apr/2017:13:35:51 +0800] "GET /ssm/address/updateAddress?userid=3&receiver_address_id=1&receiver_address_username=1111111111111111&receiver_address_useradr=1111111111&receiver_address_usertel=111111111111 HTTP/1.0" 500 12312 http-bio-82-exec-10 366

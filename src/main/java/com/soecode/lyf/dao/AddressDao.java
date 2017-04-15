@@ -35,7 +35,7 @@ public interface AddressDao {
 	 * @param receiver_address_useradr
 	 * @return
 	 */
-	Integer updateAddress(@Param("userid") long userid, @Param("receiver_address_id") String receiver_address_id,
+	Integer updateAddress(@Param("userid") long userid, @Param("receiver_address_id") long receiver_address_id,
 						  @Param("receiver_address_username") String receiver_address_username,
 						  @Param("receiver_address_usertel") String receiver_address_usertel,
 						  @Param("receiver_address_useradr") String receiver_address_useradr);

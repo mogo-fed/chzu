@@ -35,7 +35,7 @@ public class AddressServiceImpl implements AddressService {
 	}
 
 	@Override
-	public Integer updateAddress(long userid, String receiver_address_id,String receiver_address_username,String receiver_address_usertel,String receiver_address_useradr) {
+	public Integer updateAddress(long userid, long receiver_address_id,String receiver_address_username,String receiver_address_usertel,String receiver_address_useradr) {
 		return addressDao.updateAddress(userid,receiver_address_id,receiver_address_username,receiver_address_usertel, receiver_address_useradr);
 	}
 

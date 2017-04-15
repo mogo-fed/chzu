@@ -51,7 +51,7 @@ public class AddressController {
 
 	@RequestMapping(value = "/updateAddress", method = RequestMethod.GET)
 	@ResponseBody
-	private String updateAddress(@Param("userid") long userid,  @Param("receiver_address_id") String receiver_address_id,
+	private String updateAddress(@Param("userid") long userid,  @Param("receiver_address_id") long receiver_address_id,
 								 @Param("receiver_address_username") String receiver_address_username,
 								 @Param("receiver_address_usertel") String receiver_address_usertel,
 								 @Param("receiver_address_useradr") String receiver_address_useradr) {
