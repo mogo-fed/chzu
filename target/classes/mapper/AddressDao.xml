@@ -25,7 +25,7 @@
 
 	<update id="updateAddress">
 		UPDATE receiver_address
-		SET user_id = #{userid},receiver_address_id = #{receiver_address_id},receiver_address_username = #{receiver_address_username},receiver_address_usertel = #{receiver_address_usertel} ,receiver_address_useradr =#{receiver_address_useradr}}
+		SET user_id = #{userid},receiver_address_id = #{receiver_address_id},receiver_address_username = #{receiver_address_username},receiver_address_usertel = #{receiver_address_usertel} ,receiver_address_useradr =#{receiver_address_useradr}
 		WHERE user_id = #{userid} AND receiver_address_id = #{receiver_address_id}
 	</update>
 

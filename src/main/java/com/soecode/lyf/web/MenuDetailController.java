@@ -37,7 +37,6 @@ public class MenuDetailController {
 
 	@RequestMapping(value = "/addMenuDetail", method = RequestMethod.POST)
 	@ResponseBody
-
 	private String addMenuDetail(@RequestParam("msId") long msId, @RequestParam("mdName") String mdName,
 								 @RequestParam("mdImg") String mdImg, @RequestParam("mdNowprice") String mdNowprice,
 								 @RequestParam("mdPreprice") String mdPreprice, @RequestParam("mdDescribe") String mdDescribe,

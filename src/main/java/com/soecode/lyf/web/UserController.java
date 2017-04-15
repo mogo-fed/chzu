@@ -22,8 +22,8 @@ public class UserController {
 
 	@RequestMapping(value = "/queryUserAll", method = RequestMethod.GET)
 	@ResponseBody
-	private List<User> list() {
-		List<User> list = userService.queryUserAll();
+	private List<User> list(@Param("userid") long userid, @Param("usertype") String usertype) {
+		List<User> list = userService.queryUserAll(userid,usertype);
 		return list;
 	}
 

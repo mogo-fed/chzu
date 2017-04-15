@@ -10,12 +10,10 @@ import java.util.List;
 public interface UserService {
 
 	/**
-	 * 查询所有图书
-	 *
+	 * 查询所有
 	 * @return
 	 */
-	List<User> queryUserAll();
-
+	List<User> queryUserAll(long userid, String usertype);
 
 	/**
 	 * 查询

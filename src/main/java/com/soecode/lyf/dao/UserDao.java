@@ -13,7 +13,7 @@ public interface UserDao {
 	 * @param
 	 * @return
 	 */
-	List<User> queryUserAll();
+	List<User> queryUserAll(@Param("userid") long userid, @Param("usertype") String usertype);
 
 	/**
 	 * @param username
