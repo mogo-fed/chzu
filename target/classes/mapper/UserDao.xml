@@ -21,8 +21,28 @@
 		FROM
 		users
 		WHERE
-		user_type = #{usertype}
+		user_type = 1
 	</select>
+
+	<select id="queryUserById" resultType="User">
+		SELECT
+		user_id,
+		user_name,
+		user_pwd,
+		user_tel,
+		user_adr,
+		user_type,
+		user_sellername,
+		user_avatar,
+		user_month_sale,
+		user_send_pay,
+		user_distribution_pay
+		FROM
+		users
+		WHERE
+		user_id = #{userid}
+	</select>
+
 
 	<select id="queryByName" resultType="User" parameterType="String">
 		<!-- 具体的sql -->

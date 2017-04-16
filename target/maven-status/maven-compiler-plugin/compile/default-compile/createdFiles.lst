@@ -1,8 +1,11 @@
 com\soecode\lyf\dao\UserDao.class
+com\soecode\lyf\web\OrderController.class
 com\soecode\lyf\service\impl\MenuSortServiceImpl.class
 com\soecode\lyf\entity\MenuSort.class
 com\soecode\lyf\service\AddressService.class
+com\soecode\lyf\entity\Order.class
 com\soecode\lyf\web\AddressController.class
+com\soecode\lyf\service\OrderService.class
 com\soecode\lyf\dto\Result.class
 com\soecode\lyf\service\impl\AddressServiceImpl.class
 com\soecode\lyf\web\MenuDetailController.class
@@ -13,9 +16,11 @@ com\soecode\lyf\entity\Address.class
 com\soecode\lyf\service\impl\UserServiceImpl.class
 com\soecode\lyf\service\MenuDetailService.class
 com\soecode\lyf\service\impl\MenuDetailServiceImpl.class
+com\soecode\lyf\dao\OrderDao.class
 com\soecode\lyf\service\MenuSortService.class
 com\soecode\lyf\dao\MenuSortDao.class
 com\soecode\lyf\web\MenuSortController.class
 com\soecode\lyf\entity\User.class
+com\soecode\lyf\service\impl\OrderServiceImpl.class
 com\soecode\lyf\entity\MenuDetail.class
 com\soecode\lyf\service\UserService.class

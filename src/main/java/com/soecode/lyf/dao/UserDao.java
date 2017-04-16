@@ -13,7 +13,15 @@ public interface UserDao {
 	 * @param
 	 * @return
 	 */
-	List<User> queryUserAll(@Param("userid") long userid, @Param("usertype") String usertype);
+	List<User> queryUserAll();
+
+	/**
+	 * 查询所有
+	 * @param
+	 * @param
+	 * @return
+	 */
+	List<User> queryUserById(@Param("userid") String userid);
 
 	/**
 	 * @param username

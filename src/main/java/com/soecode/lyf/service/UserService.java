@@ -13,7 +13,13 @@ public interface UserService {
 	 * 查询所有
 	 * @return
 	 */
-	List<User> queryUserAll(long userid, String usertype);
+	List<User> queryUserAll();
+
+	/**
+	 * 查询所有
+	 * @return
+	 */
+	List<User> queryUserById(String userid);
 
 	/**
 	 * 查询
