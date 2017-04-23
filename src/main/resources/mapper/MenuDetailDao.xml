@@ -52,7 +52,7 @@
 <!-- =========================================================== -->
 
 	<!-- 3、获取某班级以及班级里面所有学生的信息 -->
-    <select id="getMenuSortDetail" parameterType="int" resultMap="menuDetailAll">
+    <select id="queryMenuSortDetail" parameterType="int" resultMap="menuDetailAll">
         <!-- select * 
         from Class c left join ClassStudent cs
                 on c.class_id = cs.class_id
@@ -62,8 +62,9 @@
         select * 
         from menu_sort  s left join menu_detail d 
         	on s.ms_id = d.ms_id
-        where s.user_id = #{userId}
+        where s.user_id = 3
     </select>
+
     <resultMap type="com.soecode.lyf.entity.MenuSortDetail" id="menuDetailAll">
         <id property="msId" column="ms_id"/>
         <result property="msName" column="ms_name"/>
@@ -75,4 +76,5 @@
         	<result property="mdName" column="md_name"/>
         </collection>
     </resultMap>
+
 </mapper>
