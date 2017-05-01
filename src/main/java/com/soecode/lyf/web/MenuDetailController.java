@@ -28,7 +28,7 @@ public class MenuDetailController {
 		return list;
 	}
 
-	@RequestMapping(value = "/queryMdByMsId", method = RequestMethod.GET)
+	@RequestMapping(value = "/queryMdByMsId", method = RequestMethod.POST)
 	@ResponseBody
 	private List<MenuDetail> queryMdByMsId(@Param("msId") long msId) {
 		List<MenuDetail> menudetail = menudetailService.queryMdByMsId(msId);

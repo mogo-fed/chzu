@@ -19,21 +19,21 @@ public class MenuSortController {
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
 	@Autowired
 	private MenuSortService menusortService;
-	@RequestMapping(value = "/queryMenuSortAll", method = RequestMethod.GET)
+	@RequestMapping(value = "/queryMenuSortAll", method = RequestMethod.POST)
 	@ResponseBody
 	private List<MenuSort> list() {
 		List<MenuSort> list= menusortService.queryMenuSortAll();
 		return list;
 	}
 
-	@RequestMapping(value = "/addMenuSort", method = RequestMethod.GET)
+	@RequestMapping(value = "/addMenuSort", method = RequestMethod.POST)
 	@ResponseBody
 	private String addMenuSort(@Param("msName") String msName) {
 		Integer addList = menusortService.addMenuSort(msName);
 		return Integer.toString(addList);
 	}
 
-	@RequestMapping(value = "/updateMenuSort", method = RequestMethod.GET)
+	@RequestMapping(value = "/updateMenuSort", method = RequestMethod.POST)
 	@ResponseBody
 	private String updateMenuSort(@Param("msName") String msName) {
 		Integer updateMenuSort = menusortService.updateMenuSort(msName);
