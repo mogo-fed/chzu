@@ -57,9 +57,11 @@ public class UserController {
 
 	@RequestMapping(value = "/updateUser", method = RequestMethod.POST)
 	@ResponseBody
-	private String updateUser(@Param("username") String username,@Param("userpwd") String userpwd, @Param("usertel") String usertel,@Param("useradr") String useradr,
-							  @Param("usertype") String usertype,@Param("usersellername") String usersellername) {
-		Integer updateUser = userService.updateUser(username,userpwd,usertel,useradr,usertype,usersellername);
+	private String updateUser(@Param("username") String username, @Param("usertel") String usertel,@Param("useradr") String useradr,
+							  @Param("usertype") String usertype,@Param("usersellername") String usersellername,
+							  @Param("usersendpay") String usersendpay,@Param("userdistributionpay") String userdistributionpay,
+							  @Param("userAvatar") String useravatar) {
+		Integer updateUser = userService.updateUser(username,usertel,useradr,usertype,usersellername,usersendpay,userdistributionpay,useravatar);
 		return updateUser.toString();
 	}
 

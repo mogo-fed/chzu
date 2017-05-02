@@ -21,22 +21,22 @@ public class MenuSortController {
 	private MenuSortService menusortService;
 	@RequestMapping(value = "/queryMenuSortAll", method = RequestMethod.POST)
 	@ResponseBody
-	private List<MenuSort> list() {
-		List<MenuSort> list= menusortService.queryMenuSortAll();
+	private List<MenuSort> list(@Param("sellerId") long sellerId ) {
+		List<MenuSort> list= menusortService.queryMenuSortAll(sellerId);
 		return list;
 	}
 
 	@RequestMapping(value = "/addMenuSort", method = RequestMethod.POST)
 	@ResponseBody
-	private String addMenuSort(@Param("msName") String msName) {
-		Integer addList = menusortService.addMenuSort(msName);
+	private String addMenuSort(@Param("sellerId") long sellerId ,@Param("msName") String msName) {
+		Integer addList = menusortService.addMenuSort(sellerId ,msName);
 		return Integer.toString(addList);
 	}
 
 	@RequestMapping(value = "/updateMenuSort", method = RequestMethod.POST)
 	@ResponseBody
-	private String updateMenuSort(@Param("msName") String msName) {
-		Integer updateMenuSort = menusortService.updateMenuSort(msName);
+	private String updateMenuSort(@Param("sellerId") long sellerId ,@Param("msName") String msName) {
+		Integer updateMenuSort = menusortService.updateMenuSort(sellerId ,msName);
 		return updateMenuSort.toString();
 	}
 }

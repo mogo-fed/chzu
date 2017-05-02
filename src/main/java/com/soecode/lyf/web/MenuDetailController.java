@@ -37,14 +37,14 @@ public class MenuDetailController {
 
 	@RequestMapping(value = "/addMenuDetail", method = RequestMethod.POST)
 	@ResponseBody
-	private String addMenuDetail(@RequestParam("msId") long msId, @RequestParam("mdName") String mdName,
-								 @RequestParam("mdImg") String mdImg, @RequestParam("mdNowprice") String mdNowprice,
+	private String addMenuDetail(@RequestParam("msId") long msId, @RequestParam("mdName") String mdName,@RequestParam("mdNowprice") String mdNowprice,
 								 @RequestParam("mdPreprice") String mdPreprice, @RequestParam("mdDescribe") String mdDescribe,
-								 @RequestParam("mdMonthsale") String mdMonthsale,@RequestParam("mdPraise") String mdPraise) {
-		Integer addList = menudetailService.addMenuDetail(msId, mdName, mdImg, mdNowprice,
+								 @RequestParam("mdMonthsale") String mdMonthsale,@RequestParam("mdPraise") String mdPraise,@RequestParam("mdImg") String mdImg) {
+
+		Integer addList = menudetailService.addMenuDetail(msId, mdName,mdImg, mdNowprice,
 				mdPreprice, mdDescribe, mdMonthsale, mdPraise);
 		System.out.print("--------------------------------");
-		System.out.print(mdName);
+		System.out.print(mdPraise);
 		return Integer.toString(addList);
 	}
 

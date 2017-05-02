@@ -6,17 +6,20 @@
 	<!-- 目的：为dao接口方法提供sql语句配置 -->
 	<select id="queryMenuSortAll" resultType="MenuSort">
 		SELECT
-		ms_id,
-		ms_name
+			ms_id,
+			seller_id,
+			ms_name
 		FROM
-		menu_sort
+			menu_sort
+		WHERE
+			seller_id = #{sellerId}
 	</select>
 
 	<insert id="addMenuSort">
 		INSERT INTO
-			menu_sort (ms_name)
+			menu_sort (seller_id,ms_name)
 		VALUES
-			(#{msName})
+			(#{sellerId},#{msName})
 	</insert>
 
 	<update id="updateMenuSort">
@@ -25,7 +28,7 @@
 		SET
 			ms_name = #{msName}
 		WHERE
-			ms_name = #{msName}
+			ms_name = #{msName} AND seller_id = #{sellerId}
 	</update>
 
 </mapper>

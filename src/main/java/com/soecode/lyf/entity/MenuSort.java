@@ -6,6 +6,7 @@ package com.soecode.lyf.entity;
 public class MenuSort {
 
 	private long msId;
+	private long sellerId;
 	private String msName;
 
 	public long getMsId() {
@@ -16,6 +17,14 @@ public class MenuSort {
 		this.msId = msId;
 	}
 
+	public long getSellerId() {
+		return sellerId;
+	}
+
+	public void setSellerId(long sellerId) {
+		this.sellerId = sellerId;
+	}
+
 	public String getMsName() {
 		return msName;
 	}
@@ -24,11 +33,11 @@ public class MenuSort {
 		this.msName = msName;
 	}
 
+	public MenuSort() {
+	}
+
 	@Override
 	public String toString() {
 		return "MenuSort{}";
-	}
-
-	public MenuSort() {
 	}
 }

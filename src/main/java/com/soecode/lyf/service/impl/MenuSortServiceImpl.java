@@ -20,17 +20,17 @@ public class MenuSortServiceImpl implements MenuSortService {
 	private MenuSortDao menusortDao;
 
 	@Override
-	public List<MenuSort> queryMenuSortAll() {
-		return menusortDao.queryMenuSortAll();
+	public List<MenuSort> queryMenuSortAll(long sellerId) {
+		return menusortDao.queryMenuSortAll(sellerId);
 	}
 
 	@Override
-	public Integer addMenuSort(String msName) {
-		return menusortDao.addMenuSort(msName);
+	public Integer addMenuSort(long sellerId ,String msName) {
+		return menusortDao.addMenuSort(sellerId ,msName);
 	}
 
 	@Override
-	public Integer updateMenuSort(String msName) {
-		return menusortDao.updateMenuSort(msName);
+	public Integer updateMenuSort(long sellerId ,String msName) {
+		return menusortDao.updateMenuSort(sellerId ,msName);
 	}
 }

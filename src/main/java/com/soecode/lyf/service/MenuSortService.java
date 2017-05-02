@@ -13,18 +13,18 @@ public interface MenuSortService {
 	 * 查询所有
 	 * @return
 	 */
-	List<MenuSort> queryMenuSortAll();
+	List<MenuSort> queryMenuSortAll(long sellerId);
 
 	/**
 	 * 增加
 	 * @return
 	 */
-	Integer addMenuSort(String msName);
+	Integer addMenuSort(long sellerId ,String msName);
 
 	/**
 	 * 更新
 	 * @return
 	 */
-	Integer updateMenuSort(String msName);
+	Integer updateMenuSort(long sellerId ,String msName);
 
 }
