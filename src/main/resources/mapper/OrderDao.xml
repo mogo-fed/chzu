@@ -20,9 +20,9 @@
 
 	<insert id="addOrder">
 		INSERT INTO
-			order_detail (user_id,seller_id,md_id,order_create_time,order_number,order_total_price,order_single_number)
+			order_detail (user_id,seller_id,md_id,order_create_time,order_number,order_single_number)
 		VALUES
-			(#{userid},#{sellerid},#{mdid},#{order_create_time},#{order_number},#{order_total_price},#{order_single_number})
+			(#{userid},#{sellerid},#{mdid},#{order_create_time},#{order_number},#{order_single_number})
 	</insert>
 
 

@@ -26,9 +26,9 @@ public class OrderController {
 		return list;
 	}
 
-	@RequestMapping(value = "/addOrder", method = RequestMethod.GET)
+	@RequestMapping(value = "/addOrder", method = RequestMethod.POST)
 	@ResponseBody
-	private String addOrder(@Param("userid") int userid, @Param("sellerid") int sellerid, @Param("mdid") String[] mdids) {
+	private String addOrder(@Param("userid") int userid, @Param("sellerid") int sellerid, @Param("mdid") String mdids) {
 
 		//Integer order_number=sellerid.toString()+userid.toString()+mdid.toString()+order_create_time;
 
