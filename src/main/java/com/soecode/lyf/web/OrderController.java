@@ -28,10 +28,13 @@ public class OrderController {
 
 	@RequestMapping(value = "/addOrder", method = RequestMethod.GET)
 	@ResponseBody
-	private String addOrder(@Param("userid") int userid, @Param("sellerid") int sellerid, @Param("mdid") int mdid,
-							@Param("order_create_time") String order_create_time, @Param("order_number") String order_number,
-							@Param("order_total_price") String order_total_price,@Param("order_single_number") int order_single_number) {
-		Integer addList = orderService.addOrder(userid, sellerid, mdid, order_create_time, order_number, order_total_price, order_single_number);
+	private String addOrder(@Param("userid") int userid, @Param("sellerid") int sellerid, @Param("mdid") String[] mdids) {
+
+		//Integer order_number=sellerid.toString()+userid.toString()+mdid.toString()+order_create_time;
+
+
+		Integer addList = orderService.addOrder(userid, sellerid, mdids);
+
 		return Integer.toString(addList);
 	}
 

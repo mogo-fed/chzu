@@ -19,8 +19,7 @@ public interface OrderService {
 	 * 增加
 	 * @return
 	 */
-	Integer addOrder(int userid, int sellerid, int mdid, String order_create_time, String order_number,
-					 String order_total_price,int order_single_number);
+	Integer addOrder(int userid, int sellerid, String[] mdids, String order_create_time, String order_number);
 
 
 }

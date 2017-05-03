@@ -25,9 +25,23 @@ public class OrderServiceImpl implements OrderService {
 	}
 
 	@Override
-	public Integer addOrder(int userid, int sellerid, int mdid, String order_create_time, String order_number,
-							String order_total_price,int order_single_number) {
-		return orderDao.addOrder( userid, sellerid, mdid, order_create_time, order_number, order_total_price, order_single_number);
+	public Integer addOrder(int userid, int sellerid, String[] mdids) {
+		//TODO 添加事务 transaction
+
+		String order_number=sellerid.toString()+userid.toString()+mdid.toString()+order_create_time;
+		String order_create_time=new Date().getTime().toString();
+
+		for(int i=0;i<mdids.length;i++){
+			String[] _mdid=mdids[i].split("-");
+			Integer order_single_number=Integer.parseInt(_mdid[0]);
+			Integer mdid=Integer.parseInt(_mdid[1]);
+
+			orderDao.addOrder( userid, sellerid, mdid, order_create_time, order_number, order_single_number);
+		}
+		
+		
+		return 1;
+
 	}
 
 }
