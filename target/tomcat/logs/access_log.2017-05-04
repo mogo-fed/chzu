@@ -1,0 +1,10 @@
+127.0.0.1 - - [04/May/2017:00:00:00 +0800] "POST /ssm/order/addOrder HTTP/1.0" 200 1 http-bio-82-exec-7 104
+127.0.0.1 - - [04/May/2017:00:00:19 +0800] "POST /ssm/user/queryUserAll HTTP/1.0" 200 9618 http-bio-82-exec-8 9
+127.0.0.1 - - [04/May/2017:00:00:39 +0800] "POST /ssm/user/queryByName HTTP/1.0" 200 198 http-bio-82-exec-9 13
+127.0.0.1 - - [04/May/2017:00:00:42 +0800] "POST /ssm/user/queryUserAll HTTP/1.0" 200 9618 http-bio-82-exec-10 9
+0:0:0:0:0:0:0:1 - - [04/May/2017:19:16:07 +0800] "GET /ssm/orderdetail/queryOrderDetail?userid=23 HTTP/1.1" 405 1045 http-bio-82-exec-3 3764
+0:0:0:0:0:0:0:1 - - [04/May/2017:19:16:07 +0800] "GET /favicon.ico HTTP/1.1" 404 - http-bio-82-exec-4 0
+0:0:0:0:0:0:0:1 - - [04/May/2017:19:17:39 +0800] "GET /ssm/orderdetail/queryOrderDetail?userid=23 HTTP/1.1" 500 4975 http-bio-82-exec-1 3548
+0:0:0:0:0:0:0:1 - - [04/May/2017:19:25:15 +0800] "GET /ssm/orderdetail/queryOrderDetail?userid=23 HTTP/1.1" 500 4975 http-bio-82-exec-2 99751
+0:0:0:0:0:0:0:1 - - [04/May/2017:19:31:07 +0800] "GET /ssm/orderdetail/queryOrderDetail?userid=23 HTTP/1.1" 500 4975 http-bio-82-exec-1 63225
+0:0:0:0:0:0:0:1 - - [04/May/2017:19:34:48 +0800] "GET /ssm/orderdetail/queryOrderDetail?userid=23 HTTP/1.1" 500 4975 http-bio-82-exec-1 24400

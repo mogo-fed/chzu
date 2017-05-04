@@ -30,9 +30,6 @@ public class OrderController {
 	@ResponseBody
 	private String addOrder(@Param("userid") int userid, @Param("sellerid") int sellerid, @Param("mdid") String mdids) {
 
-		//Integer order_number=sellerid.toString()+userid.toString()+mdid.toString()+order_create_time;
-
-
 		Integer addList = orderService.addOrder(userid, sellerid, mdids);
 
 		return Integer.toString(addList);

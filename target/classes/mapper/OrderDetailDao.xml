@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.soecode.lyf.dao.OrderDao">
+	<!-- 目的：为dao接口方法提供sql语句配置 -->
+
+	<select id="queryOrderDetail" resultType="OrderDetail">
+		select
+			o.order_single_number,
+			o.order_number,
+			m.md_name,
+			m.md_preprice
+		from
+			order_detail o inner join menu_detail m on o.md_id = m.md_id
+		where
+			o.user_id = #{userid};
+	</select>
+
+</mapper>
