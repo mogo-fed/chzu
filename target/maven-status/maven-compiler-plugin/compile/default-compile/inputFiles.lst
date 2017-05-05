@@ -2,7 +2,10 @@ E:\takeout_chzu\chzu_b\src\main\java\com\soecode\lyf\service\impl\OrderServiceIm
 E:\takeout_chzu\chzu_b\src\main\java\com\soecode\lyf\web\MenuSortController.java
 E:\takeout_chzu\chzu_b\src\main\java\com\soecode\lyf\service\MenuSortService.java
 E:\takeout_chzu\chzu_b\src\main\java\com\soecode\lyf\entity\Order.java
+E:\takeout_chzu\chzu_b\src\main\java\com\soecode\lyf\dao\OrderDetailDao.java
 E:\takeout_chzu\chzu_b\src\main\java\com\soecode\lyf\service\impl\MenuSortServiceImpl.java
+E:\takeout_chzu\chzu_b\src\main\java\com\soecode\lyf\web\OrderDetailController.java
+E:\takeout_chzu\chzu_b\src\main\java\com\soecode\lyf\service\OrderDetailService.java
 E:\takeout_chzu\chzu_b\src\main\java\com\soecode\lyf\service\MenuSortDetailService.java
 E:\takeout_chzu\chzu_b\src\main\java\com\soecode\lyf\web\MenuDetailController.java
 E:\takeout_chzu\chzu_b\src\main\java\com\soecode\lyf\service\impl\UserServiceImpl.java
@@ -19,6 +22,7 @@ E:\takeout_chzu\chzu_b\src\main\java\com\soecode\lyf\service\MenuDetailService.j
 E:\takeout_chzu\chzu_b\src\main\java\com\soecode\lyf\entity\MenuSort.java
 E:\takeout_chzu\chzu_b\src\main\java\com\soecode\lyf\service\impl\MenuDetailServiceImpl.java
 E:\takeout_chzu\chzu_b\src\main\java\com\soecode\lyf\dao\OrderDao.java
+E:\takeout_chzu\chzu_b\src\main\java\com\soecode\lyf\service\impl\OrderDetailServiceImpl.java
 E:\takeout_chzu\chzu_b\src\main\java\com\soecode\lyf\web\UserController.java
 E:\takeout_chzu\chzu_b\src\main\java\com\soecode\lyf\dao\UserDao.java
 E:\takeout_chzu\chzu_b\src\main\java\com\soecode\lyf\service\AddressService.java
@@ -27,5 +31,6 @@ E:\takeout_chzu\chzu_b\src\main\java\com\soecode\lyf\dao\MenuDetailDao.java
 E:\takeout_chzu\chzu_b\src\main\java\com\soecode\lyf\entity\User.java
 E:\takeout_chzu\chzu_b\src\main\java\com\soecode\lyf\dao\MenuSortDao.java
 E:\takeout_chzu\chzu_b\src\main\java\com\soecode\lyf\service\impl\MenuSortDetailServiceImpl.java
+E:\takeout_chzu\chzu_b\src\main\java\com\soecode\lyf\entity\OrderDetail.java
 E:\takeout_chzu\chzu_b\src\main\java\com\soecode\lyf\entity\Address.java
 E:\takeout_chzu\chzu_b\src\main\java\com\soecode\lyf\web\MenuSortDetailController.java

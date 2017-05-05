@@ -8,18 +8,21 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.List;
 
 @Service
 public class OrderDetailServiceImpl implements OrderDetailService {
+
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
+
 	// 注入Service依赖
 	@Autowired
 	private OrderDetailDao orderDetailDao;
 
 	@Override
-	public List<OrderDetail> queryOrderDetail(long  userid) {
-		return orderDetailDao.queryOrderDetail(userid);
+	public List<OrderDetail> queryOrderDetailAll(int userid) {
+		return orderDetailDao.queryOrderDetailAll(userid);
 	}
 
 }

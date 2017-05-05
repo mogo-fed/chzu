@@ -11,5 +11,8 @@ public interface OrderDetailDao {
 	 * 查询
 	 * @return
 	 */
-	List<OrderDetail> queryOrderDetail(@Param("userid") long userid);
+
+	List<OrderDetail> queryOrderDetailAll(@Param("userid") int userid);
+
+	
 }

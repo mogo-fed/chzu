@@ -18,11 +18,13 @@ import java.util.List;
 public class OrderDetailController {
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
 	@Autowired
-	private OrderDetailService orderDetailService;
-	@RequestMapping(value = "/queryOrderDetail", method = RequestMethod.GET)
+	private OrderDetailService orderService;
+	@RequestMapping(value = "/queryOrderDetailAll", method = RequestMethod.POST)
 	@ResponseBody
-	private List<OrderDetail> list(@Param("userid") long userid) {
-		List<OrderDetail> list= orderDetailService.queryOrderDetail(userid);
+	private List<OrderDetail> list(@Param("userid") int userid) {
+		List<OrderDetail> list= orderService.queryOrderDetailAll(userid);
 		return list;
 	}
+
+
 }

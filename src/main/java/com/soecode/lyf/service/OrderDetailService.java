@@ -10,10 +10,9 @@ import java.util.List;
 public interface OrderDetailService {
 
 	/**
-	 * 查询
+	 * 查询所有
 	 * @return
 	 */
-	List<OrderDetail> queryOrderDetail(long userid);
+	List<OrderDetail> queryOrderDetailAll(int userid);
 
-	
 }
