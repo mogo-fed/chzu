@@ -65,7 +65,7 @@ public class UserController {
 		return updateUser.toString();
 	}
 
-	@RequestMapping(value = "/updateUserPwd", method = RequestMethod.GET)
+	@RequestMapping(value = "/updateUserPwd", method = RequestMethod.POST)
 	@ResponseBody
 	private String updateUserPwd(@Param("username") String username,@Param("userpwd") String userpwd) {
 		Integer updateUser = userService.updateUserPwd(username,userpwd);
