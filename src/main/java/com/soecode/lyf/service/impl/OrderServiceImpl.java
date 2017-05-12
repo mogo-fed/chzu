@@ -21,8 +21,8 @@ public class OrderServiceImpl implements OrderService {
 	private OrderDao orderDao;
 
 	@Override
-	public List<Order> queryOrderAll(int  userid) {
-		return orderDao.queryOrderAll(userid);
+	public List<Order> queryOrderAll(int  userid ,int order_status) {
+		return orderDao.queryOrderAll(userid ,order_status);
 	}
 
 	@Override
@@ -39,4 +39,10 @@ public class OrderServiceImpl implements OrderService {
 		}
 		return 1;
 	}
+
+	@Override
+	public Integer updateOrderStatus(int userid, int sellerid, String order_number,int order_status) {
+		return orderDao.updateOrderStatus(userid, sellerid, order_number, order_status);
+	}
+
 }

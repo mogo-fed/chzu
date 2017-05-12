@@ -19,10 +19,18 @@ public class OrderDetailController {
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
 	@Autowired
 	private OrderDetailService orderService;
+
 	@RequestMapping(value = "/queryOrderDetailAll", method = RequestMethod.POST)
 	@ResponseBody
-	private List<OrderDetail> list(@Param("userid") int userid) {
+	private List<OrderDetail> list(@Param("userid") int userid ) {
 		List<OrderDetail> list= orderService.queryOrderDetailAll(userid);
+		return list;
+	}
+
+	@RequestMapping(value = "/queryUserOrderDetail", method = RequestMethod.POST)
+	@ResponseBody
+	private List<OrderDetail> list(@Param("userid") int userid ,@Param("order_status") int order_status) {
+		List<OrderDetail> list= orderService.queryUserOrderDetail(userid ,order_status);
 		return list;
 	}
 

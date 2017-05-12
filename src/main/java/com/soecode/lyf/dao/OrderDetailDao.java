@@ -12,7 +12,9 @@ public interface OrderDetailDao {
 	 * @return
 	 */
 
-	List<OrderDetail> queryOrderDetailAll(@Param("userid") int userid);
+	List<OrderDetail> queryOrderDetailAll(@Param("userid") int userid );
+
+	List<OrderDetail> queryUserOrderDetail(@Param("userid") int userid ,@Param("order_status") int order_status);
 
 	
 }

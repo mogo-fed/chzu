@@ -21,18 +21,23 @@ public class OrderController {
 	private OrderService orderService;
 	@RequestMapping(value = "/queryOrderAll", method = RequestMethod.GET)
 	@ResponseBody
-	private List<Order> list(@Param("userid") int userid) {
-		List<Order> list= orderService.queryOrderAll(userid);
+	private List<Order> list(@Param("userid") int userid,@Param("order_status") int order_status) {
+		List<Order> list= orderService.queryOrderAll(userid , order_status);
 		return list;
 	}
 
 	@RequestMapping(value = "/addOrder", method = RequestMethod.POST)
 	@ResponseBody
 	private String addOrder(@Param("userid") int userid, @Param("sellerid") int sellerid, @Param("mdid") String mdids) {
-
 		Integer addList = orderService.addOrder(userid, sellerid, mdids);
-
 		return Integer.toString(addList);
 	}
 
+	@RequestMapping(value = "/updateOrderStatus", method = RequestMethod.POST)
+	@ResponseBody
+	private String updateOrderStatus(@Param("userid") int userid, @Param("sellerid") int sellerid,
+									 @Param("order_number") String order_number,@Param("order_status") int order_status) {
+		Integer updateOrderStatus = orderService.updateOrderStatus(userid, sellerid, order_number, order_status);
+		return updateOrderStatus.toString();
+	}
 }

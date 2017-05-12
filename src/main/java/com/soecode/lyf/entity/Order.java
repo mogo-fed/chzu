@@ -9,11 +9,11 @@ public class Order {
 	private int userId;
 	private int sellerId;
 	private int mdId;
+	private int orderStatus;
 	private String orderCreateTime;
 	private String orderNumber;
 	private String orderTotalPrice;
 	private int orderSingleNumber;
-
 
 	public int getOrderId() {
 		return orderId;
@@ -45,6 +45,14 @@ public class Order {
 
 	public void setMdId(int mdId) {
 		this.mdId = mdId;
+	}
+
+	public int getOrderStatus() {
+		return orderStatus;
+	}
+
+	public void setOrderStatus(int orderStatus) {
+		this.orderStatus = orderStatus;
 	}
 
 	public String getOrderCreateTime() {

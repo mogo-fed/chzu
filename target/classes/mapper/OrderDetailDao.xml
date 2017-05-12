@@ -9,6 +9,7 @@
 		SELECT
 			o.order_single_number,
 			o.order_number,
+			o.order_status,
 			m.md_name,
 			m.md_nowprice
 		FROM
@@ -20,5 +21,40 @@
 		WHERE
 			o.user_id = #{userid}
 	</select>
+
+	<select id="queryUserOrderDetail" resultType="OrderDetail">
+		SELECT
+		o.order_single_number,
+		o.order_number,
+		o.order_status,
+		m.md_name,
+		m.md_nowprice
+		FROM
+		order_detail o
+		INNER JOIN
+		menu_detail m
+		ON
+		o.md_id = m.md_id
+		WHERE
+		o.user_id = #{userid} AND o.order_status = #{order_status}
+	</select>
+
+	<select id="querySellerOrderDetail" resultType="OrderDetail">
+		SELECT
+		o.order_single_number,
+		o.order_number,
+		o.order_status,
+		m.md_name,
+		m.md_nowprice
+		FROM
+		order_detail o
+		INNER JOIN
+		menu_detail m
+		ON
+		o.md_id = m.md_id
+		WHERE
+		o.seller_id = #{seller_id} AND o.order_status = #{order_status}
+	</select>
+
 
 </mapper>

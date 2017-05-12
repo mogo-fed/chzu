@@ -13,13 +13,22 @@ public interface OrderService {
 	 * 查询所有
 	 * @return
 	 */
-	List<Order> queryOrderAll(int userid);
+	List<Order> queryOrderAll(int userid ,int order_status);
 
 	/**
 	 * 增加
 	 * @return
 	 */
 	Integer addOrder(int userid, int sellerid, String mdids);
+
+	/**
+	 * @param userid
+	 * @param sellerid
+	 * @param order_number
+	 * @param order_status
+	 * @return
+	 */
+	Integer updateOrderStatus(int userid, int sellerid,String order_number,int order_status);
 
 
 }

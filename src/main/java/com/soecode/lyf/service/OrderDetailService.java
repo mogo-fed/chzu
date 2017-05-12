@@ -15,4 +15,6 @@ public interface OrderDetailService {
 	 */
 	List<OrderDetail> queryOrderDetailAll(int userid);
 
+	List<OrderDetail> queryUserOrderDetail(int userid ,int order_status);
+
 }
