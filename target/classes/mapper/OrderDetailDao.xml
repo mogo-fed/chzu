@@ -7,13 +7,7 @@
 
 	<select id="queryOrderDetailAll" resultType="OrderDetail">
 		SELECT
-			o.order_single_number,
-			o.order_number,
-			o.order_status,
-			m.md_name,
-			m.md_nowprice,
-			u.user_sellername,
-			u.user_avatar
+			*
 		FROM
 			order_detail o
 		INNER JOIN
@@ -21,20 +15,14 @@
 		INNER JOIN
 			users u
 		ON
-			o.md_id = m.md_id
+			o.md_id = m.md_id AND o.user_id = u.user_id
 		WHERE
-			o.user_id = #{userid}
+			o.user_id = #{userid} AND u.user_id = #{userid}
 	</select>
 
 	<select id="queryUserOrderDetail" resultType="OrderDetail">
 		SELECT
-			o.order_single_number,
-			o.order_number,
-			o.order_status,
-			m.md_name,
-			m.md_nowprice,
-			u.user_sellername,
-			u.user_avatar
+			*
 		FROM
 			order_detail o
 		INNER JOIN
@@ -44,18 +32,12 @@
 		ON
 			o.md_id = m.md_id
 		WHERE
-			o.user_id = #{userid} AND o.order_status = #{order_status}
+			o.user_id = #{userid} AND u.user_id = #{userid} AND o.order_status = #{order_status}
 	</select>
 
 	<select id="querySellerOrderDetail" resultType="OrderDetail">
 		SELECT
-			o.order_single_number,
-			o.order_number,
-			o.order_status,
-			m.md_name,
-			m.md_nowprice,
-			u.user_sellername,
-			u.user_avatar
+			*
 		FROM
 			order_detail o
 		INNER JOIN
@@ -65,8 +47,7 @@
 		ON
 			o.md_id = m.md_id
 		WHERE
-			o.seller_id = #{seller_id} AND o.order_status = #{order_status}
+			o.seller_id = #{seller_id} AND u.user_id = #{userid} AND o.order_status = #{order_status}
 	</select>
-
 
 </mapper>
