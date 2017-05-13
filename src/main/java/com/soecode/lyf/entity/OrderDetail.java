@@ -15,6 +15,9 @@ public class OrderDetail {
 	private String mdName;
 	private String mdNowprice;
 
+	private String userSellername;
+	private String userAvatar;
+
 	public int getUserId() {
 		return userId;
 	}
@@ -69,6 +72,22 @@ public class OrderDetail {
 
 	public void setMdNowprice(String mdNowprice) {
 		this.mdNowprice = mdNowprice;
+	}
+
+	public String getUserSellername() {
+		return userSellername;
+	}
+
+	public void setUserSellername(String userSellername) {
+		this.userSellername = userSellername;
+	}
+
+	public String getUserAvatar() {
+		return userAvatar;
+	}
+
+	public void setUserAvatar(String userAvatar) {
+		this.userAvatar = userAvatar;
 	}
 
 	@Override
