@@ -14,10 +14,16 @@
 
 	<insert id="addOrder">
 		INSERT INTO
-			order_detail (user_id,seller_id,md_id,order_status,order_create_time,order_number,order_single_number,userSellername,userAvatar)
+			order_detail (user_id,user_name,seller_id,md_id,order_status,order_create_time,order_number,order_single_number,userSellername,userAvatar)
 		VALUES
-			(#{userid},#{sellerid},#{mdid},1,#{order_create_time},#{order_number},#{order_single_number},#{usersellername},#{useravatar})
+			(#{userid},#{username},#{sellerid},#{mdid},1,#{order_create_time},#{order_number},#{order_single_number},#{usersellername},#{useravatar})
 	</insert>
+
+	<update id="updateOrderStatus">
+		UPDATE order_detail
+		SET order_status = #{order_status}
+		WHERE order_number = #{order_number}
+	</update>
 
 
 </mapper>

@@ -14,7 +14,7 @@ public interface OrderDetailDao {
 
 	List<OrderDetail> queryOrderDetailAll(@Param("userid") int userid );
 
-	List<OrderDetail> queryUserOrderDetail(@Param("userid") int userid ,@Param("order_status") int order_status);
+	List<OrderDetail> queryUserOrderDetail(@Param("sellerid") int sellerid ,@Param("order_status") int order_status);
 
 	
 }

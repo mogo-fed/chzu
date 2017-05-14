@@ -26,7 +26,7 @@ public class OrderDetailServiceImpl implements OrderDetailService {
 	}
 
 	@Override
-	public List<OrderDetail> queryUserOrderDetail(int userid ,int order_status) {
-		return orderDetailDao.queryUserOrderDetail(userid ,order_status);
+	public List<OrderDetail> queryUserOrderDetail(int sellerid, int order_status) {
+		return orderDetailDao.queryUserOrderDetail(sellerid, order_status);
 	}
 }

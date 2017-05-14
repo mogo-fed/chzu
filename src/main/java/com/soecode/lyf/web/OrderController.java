@@ -28,8 +28,8 @@ public class OrderController {
 
 	@RequestMapping(value = "/addOrder", method = RequestMethod.POST)
 	@ResponseBody
-	private String addOrder(@Param("userid") int userid, @Param("sellerid") int sellerid, @Param("mdid") String mdids,@Param("usersellername")String usersellername,@Param("useravatar") String useravatar) {
-		Integer addList = orderService.addOrder(userid, sellerid, mdids, usersellername, useravatar);
+	private String addOrder(@Param("userid") int userid,@Param("username") String username, @Param("sellerid") int sellerid, @Param("mdid") String mdids,@Param("usersellername")String usersellername,@Param("useravatar") String useravatar) {
+		Integer addList = orderService.addOrder(userid, username, sellerid, mdids, usersellername, useravatar);
 		return Integer.toString(addList);
 	}
 
@@ -37,7 +37,7 @@ public class OrderController {
 	@ResponseBody
 	private String updateOrderStatus(@Param("userid") int userid, @Param("sellerid") int sellerid,
 									 @Param("order_number") String order_number,@Param("order_status") int order_status) {
-		Integer updateOrderStatus = orderService.updateOrderStatus(userid, sellerid, order_number, order_status);
-		return updateOrderStatus.toString();
+		Integer updateOrderList = orderService.updateOrderStatus(userid, sellerid, order_number, order_status);
+		return updateOrderList.toString();
 	}
 }

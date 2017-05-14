@@ -30,10 +30,9 @@ public class OrderDetailController {
 
 	@RequestMapping(value = "/queryUserOrderDetail", method = RequestMethod.POST)
 	@ResponseBody
-	private List<OrderDetail> list(@Param("userid") int userid ,@Param("order_status") int order_status) {
-		List<OrderDetail> list= orderService.queryUserOrderDetail(userid ,order_status);
+	private List<OrderDetail> list(@Param("sellerid") int sellerid ,@Param("order_status") int order_status) {
+		List<OrderDetail> list= orderService.queryUserOrderDetail(sellerid, order_status);
 		return list;
 	}
-
 
 }

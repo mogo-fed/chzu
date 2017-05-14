@@ -26,7 +26,7 @@ public class OrderServiceImpl implements OrderService {
 	}
 
 	@Override
-	public Integer addOrder(int userid, int sellerid, String mdids, String usersellername, String useravatar) {
+	public Integer addOrder(int userid, String username ,int sellerid, String mdids, String usersellername, String useravatar) {
 		// TODO 添加事务 transaction
 		String[] _mdids = mdids.split("_");
 		String order_create_time = Long.toString( new Date().getTime());
@@ -35,7 +35,7 @@ public class OrderServiceImpl implements OrderService {
 			String[] _mdid=_mdids[i].split("-");
 			Integer order_single_number=Integer.parseInt(_mdid[1]);
 			Integer mdid=Integer.parseInt(_mdid[0]);
-			orderDao.addOrder( userid, sellerid, mdid, order_create_time, order_number, order_single_number,usersellername,useravatar);
+			orderDao.addOrder( userid, username, sellerid, mdid, order_create_time, order_number, order_single_number,usersellername,useravatar);
 		}
 		return 1;
 	}

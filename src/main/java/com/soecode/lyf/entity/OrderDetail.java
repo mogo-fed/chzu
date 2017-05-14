@@ -8,6 +8,8 @@ import java.util.List;
 public class OrderDetail {
 
 	private int userId;
+	private String userName;
+	private int sellerId;
 	private int mdId;
 	private int orderStatus;
 	private int orderSingleNumber;
@@ -26,6 +28,22 @@ public class OrderDetail {
 		this.userId = userId;
 	}
 
+	public String getUserName() {
+		return userName;
+	}
+
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+
+	public int getSellerId() {
+		return sellerId;
+	}
+
+	public void setSellerId(int sellerId) {
+		this.sellerId = sellerId;
+	}
+
 	public int getMdId() {
 		return mdId;
 	}
@@ -34,12 +52,12 @@ public class OrderDetail {
 		this.mdId = mdId;
 	}
 
-	public int getOrder_status() {
+	public int getOrderStatus() {
 		return orderStatus;
 	}
 
-	public void setOrder_status(int order_status) {
-		this.orderStatus = order_status;
+	public void setOrderStatus(int orderStatus) {
+		this.orderStatus = orderStatus;
 	}
 
 	public int getOrderSingleNumber() {
