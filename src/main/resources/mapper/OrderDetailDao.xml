@@ -9,13 +9,15 @@
 		SELECT
 			*
 		FROM
-			order_detail o
+			(order_detail o
 		INNER JOIN
 			menu_detail m
+		ON
+			o.md_id = m.md_id)
 		INNER JOIN
 			users u
 		ON
-			o.md_id = m.md_id AND o.user_id = u.user_id
+			o.user_id = u.user_id
 		WHERE
 			o.user_id = #{userid} AND u.user_id = #{userid}
 	</select>

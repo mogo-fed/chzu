@@ -9,7 +9,7 @@ public class OrderDetail {
 
 	private int userId;
 	private int mdId;
-	private int order_status;
+	private int orderStatus;
 	private int orderSingleNumber;
 	private String orderNumber;
 	private String mdName;
@@ -35,11 +35,11 @@ public class OrderDetail {
 	}
 
 	public int getOrder_status() {
-		return order_status;
+		return orderStatus;
 	}
 
 	public void setOrder_status(int order_status) {
-		this.order_status = order_status;
+		this.orderStatus = order_status;
 	}
 
 	public int getOrderSingleNumber() {

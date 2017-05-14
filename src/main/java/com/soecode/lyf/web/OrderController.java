@@ -28,8 +28,8 @@ public class OrderController {
 
 	@RequestMapping(value = "/addOrder", method = RequestMethod.POST)
 	@ResponseBody
-	private String addOrder(@Param("userid") int userid, @Param("sellerid") int sellerid, @Param("mdid") String mdids) {
-		Integer addList = orderService.addOrder(userid, sellerid, mdids);
+	private String addOrder(@Param("userid") int userid, @Param("sellerid") int sellerid, @Param("mdid") String mdids,@Param("usersellername")String usersellername,@Param("useravatar") String useravatar) {
+		Integer addList = orderService.addOrder(userid, sellerid, mdids, usersellername, useravatar);
 		return Integer.toString(addList);
 	}
 

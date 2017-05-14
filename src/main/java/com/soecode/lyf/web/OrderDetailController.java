@@ -24,6 +24,7 @@ public class OrderDetailController {
 	@ResponseBody
 	private List<OrderDetail> list(@Param("userid") int userid ) {
 		List<OrderDetail> list= orderService.queryOrderDetailAll(userid);
+		System.out.print("==================" + list);
 		return list;
 	}
 

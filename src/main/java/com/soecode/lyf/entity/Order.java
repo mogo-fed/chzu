@@ -15,6 +15,9 @@ public class Order {
 	private String orderTotalPrice;
 	private int orderSingleNumber;
 
+	private String userSellername;
+	private String userAvatar;
+
 	public int getOrderId() {
 		return orderId;
 	}
@@ -85,6 +88,22 @@ public class Order {
 
 	public void setOrderSingleNumber(int orderSingleNumber) {
 		this.orderSingleNumber = orderSingleNumber;
+	}
+
+	public String getUserSellername() {
+		return userSellername;
+	}
+
+	public void setUserSellername(String userSellername) {
+		this.userSellername = userSellername;
+	}
+
+	public String getUserAvatar() {
+		return userAvatar;
+	}
+
+	public void setUserAvatar(String userAvatar) {
+		this.userAvatar = userAvatar;
 	}
 
 	@Override
