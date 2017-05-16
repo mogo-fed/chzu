@@ -22,28 +22,26 @@
 			o.user_id = #{userid} AND u.user_id = #{userid}
 	</select>
 
-	<select id="queryUserOrderDetail" resultType="OrderDetail">
+	<!--<select id="queryUserOrderDetail" resultType="OrderDetail">
 		SELECT
 			*
 		FROM
 			order_detail o
 		WHERE
 			o.seller_id = #{sellerid} AND o.order_status = #{order_status}
-	</select>
+	</select>-->
 
-	<select id="querySellerOrderDetail" resultType="OrderDetail">
+	<select id="queryUserOrderDetail" resultType="OrderDetail">
 		SELECT
 			*
 		FROM
 			order_detail o
 		INNER JOIN
 			menu_detail m
-		INNER JOIN
-			users u
 		ON
 			o.md_id = m.md_id
 		WHERE
-			o.seller_id = #{seller_id} AND u.user_id = #{userid} AND o.order_status = #{order_status}
+			o.seller_id = #{sellerid} AND o.order_status = #{order_status}
 	</select>
 
 </mapper>
