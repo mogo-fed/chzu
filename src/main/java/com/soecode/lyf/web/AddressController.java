@@ -20,7 +20,7 @@ public class AddressController {
 	@Autowired
 	private AddressService addressService;
 
-	@RequestMapping(value = "/queryAddressAll", method = RequestMethod.GET)
+	@RequestMapping(value = "/queryAddressAll", method = RequestMethod.POST)
 	@ResponseBody
 	private List<Address> list(@Param("userid") long userid) {
 		List<Address> list = addressService.queryAddressAll(userid);
@@ -40,7 +40,7 @@ public class AddressController {
 		}
 	}*/
 
-	@RequestMapping(value = "/addAddress", method = RequestMethod.GET)
+	@RequestMapping(value = "/addAddress", method = RequestMethod.POST)
 	@ResponseBody
 	private String addAddress(@Param("userid") long userid, @Param("receiver_address_username") String receiver_address_username,
 							  @Param("receiver_address_usertel") String receiver_address_usertel,
@@ -49,7 +49,7 @@ public class AddressController {
 		return Integer.toString(addList);
 	}
 
-	@RequestMapping(value = "/updateAddress", method = RequestMethod.GET)
+	@RequestMapping(value = "/updateAddress", method = RequestMethod.POST)
 	@ResponseBody
 	private String updateAddress(@Param("userid") long userid,  @Param("receiver_address_id") long receiver_address_id,
 								 @Param("receiver_address_username") String receiver_address_username,

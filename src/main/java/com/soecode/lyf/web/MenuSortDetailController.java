@@ -19,7 +19,7 @@ public class MenuSortDetailController {
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
 	@Autowired
 	private MenuSortDetailService menuSortDetailService;
-	@RequestMapping(value = "/queryMenuSortDetail", method = RequestMethod.GET)
+	@RequestMapping(value = "/queryMenuSortDetail", method = RequestMethod.POST)
 	@ResponseBody
 	private List<MenuSortDetail> list(@Param("userid") long userid) {
 		List<MenuSortDetail> list= menuSortDetailService.queryMenuSortDetail(userid);

@@ -7,23 +7,23 @@
 
 	<select id="queryOrderAll" resultType="Order">
 		SELECT
-			user_id,
-			seller_id,
-			md_id,
-			order_create_time,
-			order_number,
-			order_total_price,
-			order_single_number
+			*
 		FROM
 			order_detail
 	</select>
 
 	<insert id="addOrder">
 		INSERT INTO
-			order_detail (user_id,seller_id,md_id,order_create_time,order_number,order_total_price,order_single_number)
+			order_detail (user_id,user_name,seller_id,md_id,order_status,order_create_time,order_number,order_single_number,userSellername,userAvatar)
 		VALUES
-			(#{userid},#{sellerid},#{mdid},#{order_create_time},#{order_number},#{order_total_price},#{order_single_number})
+			(#{userid},#{username},#{sellerid},#{mdid},1,#{order_create_time},#{order_number},#{order_single_number},#{usersellername},#{useravatar})
 	</insert>
+
+	<update id="updateOrderStatus">
+		UPDATE order_detail
+		SET order_status = #{order_status}
+		WHERE order_number = #{order_number}
+	</update>
 
 
 </mapper>

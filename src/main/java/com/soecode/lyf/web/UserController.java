@@ -20,21 +20,21 @@ public class UserController {
 	@Autowired
 	private UserService userService;
 
-	@RequestMapping(value = "/queryUserAll", method = RequestMethod.GET)
+	@RequestMapping(value = "/queryUserAll", method = RequestMethod.POST)
 	@ResponseBody
 	private List<User> list() {
 		List<User> list = userService.queryUserAll();
 		return list;
 	}
 
-	@RequestMapping(value = "/queryUserById", method = RequestMethod.GET)
+	@RequestMapping(value = "/queryUserById", method = RequestMethod.POST)
 	@ResponseBody
 	private List<User> list(@Param("userid") String userid) {
 		List<User> list = userService.queryUserById(userid);
 		return list;
 	}
 
-	@RequestMapping(value = "/queryByName", method = RequestMethod.GET)
+	@RequestMapping(value = "/queryByName", method = RequestMethod.POST)
 	@ResponseBody
 	private User queryByName(@Param("username") String username,@Param("userpwd") String userpwd,@Param("usertype") String usertype) {
 		User user = userService.getByName(username,userpwd,usertype);
@@ -47,7 +47,7 @@ public class UserController {
 		}
 	}
 
-	@RequestMapping(value = "/addUser", method = RequestMethod.GET)
+	@RequestMapping(value = "/addUser", method = RequestMethod.POST)
 	@ResponseBody
 	private String addUser(@Param("username") String username, @Param("userpwd") String userpwd, @Param("usertel") String usertel,
 						   @Param("useradr") String useradr,@Param("usertype") String usertype,@Param("usersellername") String usersellername) {
@@ -55,29 +55,31 @@ public class UserController {
 		return Integer.toString(addList);
 	}
 
-	@RequestMapping(value = "/updateUser", method = RequestMethod.GET)
+	@RequestMapping(value = "/updateUser", method = RequestMethod.POST)
 	@ResponseBody
-	private String updateUser(@Param("username") String username,@Param("userpwd") String userpwd, @Param("usertel") String usertel,@Param("useradr") String useradr,
-							  @Param("usertype") String usertype,@Param("usersellername") String usersellername) {
-		Integer updateUser = userService.updateUser(username,userpwd,usertel,useradr,usertype,usersellername);
+	private String updateUser(@Param("username") String username, @Param("usertel") String usertel,@Param("useradr") String useradr,
+							  @Param("usertype") String usertype,@Param("usersellername") String usersellername,
+							  @Param("usersendpay") String usersendpay,@Param("userdistributionpay") String userdistributionpay,
+							  @Param("userAvatar") String useravatar) {
+		Integer updateUser = userService.updateUser(username,usertel,useradr,usertype,usersellername,usersendpay,userdistributionpay,useravatar);
 		return updateUser.toString();
 	}
 
-	@RequestMapping(value = "/updateUserPwd", method = RequestMethod.GET)
+	@RequestMapping(value = "/updateUserPwd", method = RequestMethod.POST)
 	@ResponseBody
 	private String updateUserPwd(@Param("username") String username,@Param("userpwd") String userpwd) {
 		Integer updateUser = userService.updateUserPwd(username,userpwd);
 		return updateUser.toString();
 	}
 
-	@RequestMapping(value = "/updateUserTel", method = RequestMethod.GET)
+	@RequestMapping(value = "/updateUserTel", method = RequestMethod.POST)
 	@ResponseBody
 	private String updateUserTel(@Param("username") String username,@Param("usertel") String usertel) {
 		Integer updateUser = userService.updateUserTel(username,usertel);
 		return updateUser.toString();
 	}
 
-	@RequestMapping(value = "/updateUserAdr", method = RequestMethod.GET)
+	@RequestMapping(value = "/updateUserAdr", method = RequestMethod.POST)
 	@ResponseBody
 	private String updateUserAdr(@Param("username") String username,@Param("useradr") String useradr,@Param("usertel") String usertel) {
 		Integer updateUser = userService.updateUserAdr(username,useradr,usertel);

@@ -48,8 +48,10 @@ public interface UserDao {
 	 * @param useradr
 	 * @return
 	 */
-	Integer updateUser(@Param("username") String username,@Param("userpwd") String userpwd, @Param("usertel") String usertel,@Param("useradr") String useradr,
-					   @Param("usertype") String usertype,@Param("usersellername") String usersellername);
+	Integer updateUser(@Param("username") String username, @Param("usertel") String usertel,@Param("useradr") String useradr,
+					   @Param("usertype") String usertype,@Param("usersellername") String usersellername,
+					   @Param("usersendpay") String usersendpay,@Param("userdistributionpay") String userdistributionpay,
+					   @Param("useravatar") String useravatar);
 
 	/**
 	 * @param username

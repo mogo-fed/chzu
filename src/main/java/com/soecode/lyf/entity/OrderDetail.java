@@ -1,31 +1,24 @@
 package com.soecode.lyf.entity;
 
+import java.util.List;
+
 /**
  * 实体
  */
-public class Order {
+public class OrderDetail {
 
-	private int orderId;
 	private int userId;
 	private String userName;
 	private int sellerId;
 	private int mdId;
 	private int orderStatus;
-	private String orderCreateTime;
-	private String orderNumber;
-	private String orderTotalPrice;
 	private int orderSingleNumber;
+	private String orderNumber;
+	private String mdName;
+	private String mdNowprice;
 
 	private String userSellername;
 	private String userAvatar;
-
-	public int getOrderId() {
-		return orderId;
-	}
-
-	public void setOrderId(int orderId) {
-		this.orderId = orderId;
-	}
 
 	public int getUserId() {
 		return userId;
@@ -67,12 +60,12 @@ public class Order {
 		this.orderStatus = orderStatus;
 	}
 
-	public String getOrderCreateTime() {
-		return orderCreateTime;
+	public int getOrderSingleNumber() {
+		return orderSingleNumber;
 	}
 
-	public void setOrderCreateTime(String orderCreateTime) {
-		this.orderCreateTime = orderCreateTime;
+	public void setOrderSingleNumber(int orderSingleNumber) {
+		this.orderSingleNumber = orderSingleNumber;
 	}
 
 	public String getOrderNumber() {
@@ -83,20 +76,20 @@ public class Order {
 		this.orderNumber = orderNumber;
 	}
 
-	public String getOrderTotalPrice() {
-		return orderTotalPrice;
+	public String getMdName() {
+		return mdName;
 	}
 
-	public void setOrderTotalPrice(String orderTotalPrice) {
-		this.orderTotalPrice = orderTotalPrice;
+	public void setMdName(String mdName) {
+		this.mdName = mdName;
 	}
 
-	public int getOrderSingleNumber() {
-		return orderSingleNumber;
+	public String getMdNowprice() {
+		return mdNowprice;
 	}
 
-	public void setOrderSingleNumber(int orderSingleNumber) {
-		this.orderSingleNumber = orderSingleNumber;
+	public void setMdNowprice(String mdNowprice) {
+		this.mdNowprice = mdNowprice;
 	}
 
 	public String getUserSellername() {
@@ -117,9 +110,9 @@ public class Order {
 
 	@Override
 	public String toString() {
-		return "Order{}";
+		return "OrderDetail{}";
 	}
 
-	public Order() {
+	public OrderDetail() {
 	}
 }

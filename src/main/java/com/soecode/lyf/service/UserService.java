@@ -40,7 +40,7 @@ public interface UserService {
 	 * 更新
 	 * @return
 	 */
-	Integer updateUser(String username, String userpwd, String usertel,String useradr,String usertype,String usersellername);
+	Integer updateUser(String username,String usertel,String useradr,String usertype,String usersellername,String usersendpay,String userdistributionpay,String useravatar);
 
 	/**
 	 * 更新

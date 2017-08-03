@@ -66,7 +66,8 @@
 
 	<update id="updateUser">
 		UPDATE users
-		SET user_name = #{username},user_pwd = #{userpwd} ,user_tel =#{usertel},user_adr =#{useradr},user_type =#{usertype},user_sellername =#{usersellername}
+		SET user_name = #{username},user_tel =#{usertel},user_adr =#{useradr},user_type =#{usertype},
+		user_sellername =#{usersellername},user_send_pay = #{usersendpay},user_distribution_pay = #{userdistributionpay},user_avatar = #{useravatar}
 		WHERE user_name = #{username}
 	</update>
 

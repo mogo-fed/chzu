@@ -9,7 +9,7 @@
         select * 
         from menu_sort  s INNER join menu_detail d
         	on s.ms_id = d.ms_id
-        where s.user_id = #{userid}
+        where s.seller_id = #{userid}
     </select>
 
     <resultMap type="com.soecode.lyf.entity.MenuSortDetail" id="menuDetailAll">
@@ -21,6 +21,11 @@
             <id property="mdId" column="md_id"/>
         	<result property="mdImg" column="md_img"/>
         	<result property="mdName" column="md_name"/>
+        	<result property="mdMonthsale" column="md_monthsale"/>
+        	<result property="mdNowprice" column="md_nowprice"/>
+        	<result property="mdPreprice" column="md_preprice"/>
+        	<result property="mdPraise" column="md_praise"/>
+        	<result property="mdDecribe" column="md_describe"/>
         </collection>
     </resultMap>
 
